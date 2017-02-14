@@ -11,10 +11,6 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "6.0"
   s.source       = { :git => "https://github.com/MapleJ/AlipaySDK.git", :tag => s.version.to_s }
 
-  s.resource = 'AliPaySDK/AlipaySDK.bundle/*{.png}'
-  s.source_files   = "AliPaySDK/Util/*.{h,m}"
-  s.vendored_frameworks = 'AliPaySDK/AlipaySDK.framework'
-  s.public_header_files = 'AliPaySDK/AlipaySDK.framework/Headers/**/*.h'
   s.frameworks = 'CoreTelephony', 'SystemConfiguration', 'CoreMotion', 'CFNetwork','QuartzCore','CoreText', 'CoreGraphics','UIKit', 'Foundation'
   s.requires_arc = true
   s.libraries    = 'z', 'c++'
