@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'Copyright', :text => '支付宝(中国)网络技术有限公司 版权所有.' }
   s.authors            = { 'Alipay' => 'https://www.alipay.com/' }
   s.platform     = :ios, "6.0"
-  s.source       = { :git => "https://github.com/MapleJ/AlipaySDK.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/SlinceDog/CMBCAlipaySDK.git", :tag => s.version.to_s }
 
   s.frameworks = 'CoreTelephony', 'SystemConfiguration', 'CoreMotion', 'CFNetwork','QuartzCore','CoreText', 'CoreGraphics','UIKit', 'Foundation'
   s.requires_arc = true
