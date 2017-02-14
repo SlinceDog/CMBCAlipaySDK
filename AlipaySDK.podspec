@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
    s.subspec "Order" do |order|
     order.source_files = 'sources/order/**/*.{h,m}'
     order.public_header_files = 'sources/order/**/*.h'
-    order.dependency 'AlipaySDK/Core'
+    order.dependency 'AlipaySDK-2.0/Core'
     order.dependency 'OpenSSL'
   end
 
