@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
     core.source_files = 'sources/extensions/ANAlipayResultCode.h','sources/order/**/*.{h,m}'
     core.resources    = 'AlipaySDK.bundle'
     core.vendored_frameworks = 'AlipaySDK.framework'
-    core.public_header_files = 'AlipaySDK.framework/Headers/**/*.h', 'sources/extensions/ANAlipayResultCode.h','sources/order/**/*.{h,m}'
+    core.public_header_files = 'AlipaySDK.framework/Headers/**/*.h', 'sources/extensions/ANAlipayResultCode.h'
   end
 
    s.subspec "Order" do |order|
