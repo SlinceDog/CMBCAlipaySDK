@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
   s.public_header_files = 'AliPaySDK/AlipaySDK.framework/Headers/**/*.h'
   s.frameworks = 'CoreTelephony', 'SystemConfiguration', 'CoreMotion', 'CFNetwork','QuartzCore','CoreText', 'CoreGraphics','UIKit', 'Foundation'
   s.requires_arc = true
-  s.libraries    = 'z', 'c++'
+  s.libraries    = 'z', 'c++','xml2'
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
   s.dependency 'OpenSSL-Universal', '~> 1.0.1.j-2'
 end
