@@ -14,15 +14,14 @@ Pod::Spec.new do |s|
   s.frameworks = 'CoreTelephony', 'SystemConfiguration', 'CoreMotion', 'CFNetwork','QuartzCore','CoreText', 'CoreGraphics','UIKit', 'Foundation'
   s.requires_arc = true
   s.libraries    = 'z', 'c++'
-
+  s.dependency 'OpenSSL'
   s.default_subspec   = 'Core'
 
   s.subspec "Core" do |core|
-    core.source_files = 'sources/extensions/ANAlipayResultCode.h','sources/extensions/Order.h','sources/extensions/Order.m'
+    core.source_files = 'sources/extensions/Order.h','sources/extensions/Order.m'
     core.resources    = 'AlipaySDK.bundle'
     core.vendored_frameworks = 'AlipaySDK.framework'
-    core.public_header_files = 'AlipaySDK.framework/Headers/**/*.h', 'sources/extensions/ANAlipayResultCode.h','sources/extensions/Order.h','sources/extensions/Order.m'
-    core.dependency 'OpenSSL'
+    core.public_header_files = 'AlipaySDK.framework/Headers/**/*.h','sources/extensions/Order.h','sources/extensions/Order.m'
   end
 
 end
