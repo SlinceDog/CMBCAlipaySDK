@@ -10,7 +10,6 @@ Pod::Spec.new do |s|
   s.authors            = { 'Alipay' => 'https://www.alipay.com/' }
   s.platform     = :ios, "6.0"
   s.source       = { :git => "https://github.com/SlinceDog/CMBCAlipaySDK.git", :tag => s.version.to_s }
-  s.source_files = 'sources/order/**/*.{h,m}'
 
   s.frameworks = 'CoreTelephony', 'SystemConfiguration', 'CoreMotion', 'CFNetwork','QuartzCore','CoreText', 'CoreGraphics','UIKit', 'Foundation'
   s.requires_arc = true
@@ -26,8 +25,8 @@ Pod::Spec.new do |s|
 
    s.subspec "Order" do |order|
     order.source_files = 'sources/order/**/*.{h,m}'
-    order.public_header_files = 'sources/order/**/*.{h,m}'
-    order.dependency 'AlipaySDK/Core'
+#    order.public_header_files = 'sources/order/**/*.{h,m}'
+    order.dependency 'AlipaySDK-2.0/Core'
     order.dependency 'OpenSSL'
   end
 
