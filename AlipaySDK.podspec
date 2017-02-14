@@ -21,13 +21,9 @@ Pod::Spec.new do |s|
     core.resources    = 'AlipaySDK.bundle'
     core.vendored_frameworks = 'AlipaySDK.framework'
     core.public_header_files = 'AlipaySDK.framework/Headers/**/*.h', 'sources/extensions/ANAlipayResultCode.h'
+    core.dependency 'OpenSSL'
   end
 
-   s.subspec "Order" do |order|
-    order.source_files = 'sources/order/**/*.{h,m}'
-    order.public_header_files = 'sources/order/**/*.{h,m}'
-    order.dependency 'AlipaySDK/Core'
-    order.dependency 'OpenSSL'
-  end
+  
 
 end
