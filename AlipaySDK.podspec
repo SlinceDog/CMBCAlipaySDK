@@ -23,16 +23,15 @@ Pod::Spec.new do |s|
   s.author             = { "AliPay" => "https://www.alipay.com/" }
   s.platform     = :ios, "6.0"
   s.source       = { :git => "https://github.com/SlinceDog/CMBCAlipaySDK.git", :tag => s.version.to_s }
-  s.vendored_frameworks = 'AlipaySDK.framework'
-  s.source_files = 'AliPay-Extend'
-#  s.vendored_libraries = 'AliPay-Extend/libcrypto.a', 'AliPay-Extend/libssl.a'
-  s.public_header_files = "AlipaySDK.framework/Headers/**/*.h"
- # s.library      = 'z','c++'
+  s.vendored_frameworks = 'AliPaySDK/AlipaySDK.framework'
+  s.vendored_libraries  = 'AliPaySDK/libcrypto.a','AliPaySDK/libssl.a'
+  s.source_files = 'AliPaySDK/Order.h','AliPaySDK/Order.m','AliPaySDK/Util/*.{h,m}','AliPaySDK/openssl/*.{h}'
+  s.public_header_files = 'AliPaySDK/AlipaySDK.framework/Headers/**/*.h','AliPaySDK/openssl/*.h'
+  s.library      = 'z','c++'
   s.resources = "AlipaySDK.bundle"
   s.requires_arc = true
  # s.libraries = "c++","z"
 
-  #s.xcconfig = { 'HEADER_SEARCH_PATHS' => "$(PODS_ROOT)/AlipaySDK",'LIBRARY_SEARCH_PATHS' => "$(PODS_ROOT)/AlipaySDK/AliPay-Extend" 
-    #           }
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => "$(PODS_ROOT)/AlipaySDK",'LIBRARY_SEARCH_PATHS' => "$(PODS_ROOT)/AlipaySDK}
   s.frameworks = 'SystemConfiguration','CoreTelephony','QuartzCore','CoreText','CoreGraphics','UIKit','Foundation','CFNetwork','CoreMotion'
 end
