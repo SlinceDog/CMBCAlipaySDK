@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
     ssl.header_dir = "openssl"
   end
   s.resources = 'AlipaySDK.bundle'
-  s.xcconfig = { 'HEADER_SEARCH_PATHS' => "$(PODS_ROOT)/AlipaySDK" 'LIBRARY_SEARCH_PATHS' => "$(PODS_ROOT)/AlipaySDK/AliPay-Extend" 
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => "$(PODS_ROOT)/AlipaySDK",'LIBRARY_SEARCH_PATHS' => "$(PODS_ROOT)/AlipaySDK/AliPay-Extend" 
                }
   s.frameworks = 'UIKit', 'Foundation', 'CFNetwork', 'SystemConfiguration','CoreMotion','QuartzCore','CoreText','CoreGraphics'
 end
