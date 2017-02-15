@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.author             = { "AliPay" => "https://www.alipay.com/" }
   s.platform     = :ios, "6.0"
   s.source       = { :git => "https://github.com/SlinceDog/CMBCAlipaySDK.git", :tag => s.version.to_s }
-  s.vendored_frameworks = 'Frameworks/AlipaySDK.framework'
+  s.vendored_frameworks = 'AliPaySDK/AlipaySDK.framework'
   s.vendored_libraries  = 'AliPaySDK/libcrypto.a','AliPaySDK/libssl.a'
   s.source_files = 'AliPaySDK/Order.h','AliPaySDK/Order.m','AliPaySDK/Util/*.{h,m}','AliPaySDK/openssl/*.{h}','AliPaySDK/AlipaySDK.framework/Headers/**/*.h'
   s.public_header_files = 'AliPaySDK/AlipaySDK.framework/Headers/**/*.h','AliPaySDK/openssl/*.h'
