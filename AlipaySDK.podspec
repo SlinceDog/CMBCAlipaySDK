@@ -33,6 +33,6 @@ Pod::Spec.new do |s|
   s.preserve_paths      = 'AliPaySDK/libcrypto.a','AliPaySDK/libssl.a','Frameworks/AlipaySDK.framework'
  # s.libraries = "c++","z"
 
-  s.xcconfig = { 'HEADER_SEARCH_PATHS' => "$(PODS_ROOT)/AlipaySDK",'LIBRARY_SEARCH_PATHS' => "$(PODS_ROOT)/AlipaySDK",'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/AlipaySDK"' }
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => "$(PODS_ROOT)/AlipaySDK/openssl",'LIBRARY_SEARCH_PATHS' => "$(PODS_ROOT)/AlipaySDK",'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/AlipaySDK"' }
   s.frameworks = 'SystemConfiguration','CoreTelephony','QuartzCore','CoreText','CoreGraphics','UIKit','Foundation','CFNetwork','CoreMotion'
 end
