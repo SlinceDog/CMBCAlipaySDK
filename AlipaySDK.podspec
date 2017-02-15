@@ -26,13 +26,13 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'AliPaySDK/AlipaySDK.framework'
   s.vendored_libraries  = 'AliPaySDK/libcrypto.a','AliPaySDK/libssl.a'
   s.source_files = 'AliPaySDK/Order.h','AliPaySDK/Order.m','AliPaySDK/Util/*.{h,m}','AliPaySDK/openssl/*.{h}','AliPaySDK/AlipaySDK.framework/Headers/**/*.h'
-  s.public_header_files = 'AliPaySDK/AlipaySDK.framework/Headers/**/*.h','AliPaySDK/openssl/*.h'
+  s.public_header_files = 'AliPaySDK/AlipaySDK.framework/Headers/**/*.h','AliPaySDK/Order.h','AliPaySDK/Order.m'
   s.library      = 'z','c++'
   s.resources = 'AliPaySDK/AlipaySDK.bundle'
   s.requires_arc = true
   s.preserve_paths      = 'AliPaySDK/libcrypto.a','AliPaySDK/libssl.a','Frameworks/AlipaySDK.framework'
  # s.libraries = "c++","z"
 
-  s.xcconfig = { 'HEADER_SEARCH_PATHS' => "$(PODS_ROOT)/AlipaySDK/openssl",'LIBRARY_SEARCH_PATHS' => "$(PODS_ROOT)/AlipaySDK",'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/AlipaySDK"' }
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => "$(PODS_ROOT)/AlipaySDK/AliPaySDK",'LIBRARY_SEARCH_PATHS' => "$(PODS_ROOT)/AlipaySDK",'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/AlipaySDK"' }
   s.frameworks = 'SystemConfiguration','CoreTelephony','QuartzCore','CoreText','CoreGraphics','UIKit','Foundation','CFNetwork','CoreMotion'
 end
