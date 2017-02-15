@@ -38,6 +38,6 @@ Pod::Spec.new do |s|
     ssl.source_files = "openssl"
     ssl.header_dir = "openssl"
   end
-  s.resources = "AlipaySDK.bundle"
-  s.frameworks = "SystemConfiguration"
+  s.resources = 'AlipaySDK.bundle'
+  s.frameworks = 'UIKit', 'Foundation', 'CFNetwork', 'SystemConfiguration','CoreMotion','QuartzCore','CoreText','CoreGraphics'
 end
