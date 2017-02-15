@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'AliPaySDK/AlipaySDK.framework'
   s.vendored_libraries  = 'AliPaySDK/libcrypto.a','AliPaySDK/libssl.a'
   s.source_files = 'AliPaySDK/Order.h','AliPaySDK/Order.m','AliPaySDK/Util/*.{h,m}','AliPaySDK/openssl/*.{h}','AliPaySDK/AlipaySDK.framework/Headers/**/*.h'
-  s.public_header_files = 'AliPaySDK/AlipaySDK.framework/Headers/**/*.h','AliPaySDK/Order.h','AliPaySDK/Order.m'
+  s.public_header_files = 'AliPaySDK/AlipaySDK.framework/Headers/**/*.h','AliPaySDK/Order.h'
   s.library      = 'z','c++'
   s.resources = 'AliPaySDK/AlipaySDK.bundle'
   s.requires_arc = true
