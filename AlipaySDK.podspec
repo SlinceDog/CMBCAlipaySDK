@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "AliPay"
+  s.name         = "AlipaySDK"
   s.version      = "2.1.2.1"
   s.summary      = "支付宝 sdk"
 
