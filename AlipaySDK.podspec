@@ -13,11 +13,10 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'AlipaySDK.framework'
   s.vendored_libraries = 'AliPay-Extend/libcrypto.a', 'AliPay-Extend/libssl.a'
   s.public_header_files = "AlipaySDK.framework/Headers/**/*.h", "openssl/*.h"
-  s.frameworks = 'CoreTelephony', 'SystemConfiguration', 'CoreMotion', 'CFNetwork','QuartzCore','CoreText', 'CoreGraphics','UIKit', 'Foundation'
+  s.frameworks = "SystemConfiguration"  
   s.requires_arc = true
-  s.libraries    = 'z', 'c++','xml2'
+  #s.libraries    = 'z', 'c++'
   s.resources = "AlipaySDK.bundle"
-  s.xconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
 
    s.subspec "AliPay-Extend" do |ae|
     ae.source_files = "AliPay-Extend"
