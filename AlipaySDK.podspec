@@ -30,8 +30,9 @@ Pod::Spec.new do |s|
  # s.library      = 'z','c++'
   s.resources = "AlipaySDK.bundle"
   s.requires_arc = true
+ # s.libraries = "c++","z"
 
   #s.xcconfig = { 'HEADER_SEARCH_PATHS' => "$(PODS_ROOT)/AlipaySDK",'LIBRARY_SEARCH_PATHS' => "$(PODS_ROOT)/AlipaySDK/AliPay-Extend" 
-               }
-  s.frameworks = 'UIKit', 'Foundation', 'CFNetwork', 'SystemConfiguration','CoreMotion','QuartzCore','CoreText','CoreGraphics'
+    #           }
+  s.frameworks = 'SystemConfiguration','CoreTelephony','QuartzCore','CoreText','CoreGraphics','UIKit','Foundation','CFNetwork','CoreMotion'
 end
