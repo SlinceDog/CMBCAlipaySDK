@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "AlipaySDK"
-  s.version      = "2.0.0"
+  s.version      = "15.2.1"
   s.summary      = "支付宝 sdk"
   s.description  = <<-DESC
                    A longer description of AliPay in Markdown format.
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'AliPaySDK/AlipaySDK.framework'
   s.vendored_libraries  = 'AliPaySDK/libcrypto.a','AliPaySDK/libssl.a'
   s.source_files = 'AliPaySDK/Order.h','AliPaySDK/Order.m','AliPaySDK/Util/*.{h,m}','AliPaySDK/openssl/*.{h}','AliPaySDK/AlipaySDK.framework/Headers/**/*.h'
-  s.public_header_files = 'AliPaySDK/AlipaySDK.framework/Headers/**/*.h','AliPaySDK/Order.h','AliPaySDK/Util/DataSigner.h'
+  s.public_header_files = 'AliPaySDK/AlipaySDK.framework/Headers/**/*.h','AliPaySDK/Order.h','AliPaySDK/Util/RSADataSigner.h'
   s.library      = 'z','c++'
   s.resources = 'AliPaySDK/AlipaySDK.bundle'
   s.requires_arc = true
